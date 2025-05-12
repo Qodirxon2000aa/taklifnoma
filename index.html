@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Telegram Taklifnoma</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <audio autoplay loop muted id="bg-music">
+    <source src="./Dadaxon-Hasan-Ona-Turkiston.m4a" type="audio/mp4" />
+    Sizning brauzeringiz audioni qo‘llab-quvvatlamaydi.
+  </audio>
+
+  <div class="container">
+    <main class="card fade-in-up">
+      <h1 class="title">Telegram Suhbatiga Taklif Etamiz</h1>
+      <p class="description">
+        Fikr almashish, bilim ulashish va do‘stona muhitda suhbatlashish uchun
+        sizni bizning rasmiy Telegram guruhimizga taklif qilamiz.
+      </p>
+      <a href="https://t.me/your_telegram_group" target="_blank" class="btn">
+        Telegram Guruhga Qo‘shilish
+      </a>
+    </main>
+
+    <footer>
+      <p class="footer-text">© 2025 Taklifnoma. Barcha huquqlar himoyalangan.</p>
+    </footer>
+  </div>
+
+  <script>
+    const music = document.getElementById("bg-music");
+
+    // Musiqa avtomatik mute holatda boshlanadi
+    music.volume = 0.4;
+
+    // Foydalanuvchi biror joyga bosganidan so‘ng, musiqa ovozi yoqiladi
+    document.addEventListener('click', () => {
+      if (music.muted) {
+        music.muted = false;
+      }
+    });
+  </script>
+</body>
+</html>

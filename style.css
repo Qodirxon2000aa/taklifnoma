@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  background-image: url("./photo_2025-05-12_21-06-51.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  padding: 60px 40px;
+  backdrop-filter: brightness(0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.card .title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px #000;
+}
+
+.card .description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.btn {
+  padding: 14px 28px;
+  background-color: #00b4d8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 10px rgba(0, 180, 216, 0.3);
+}
+
+.btn:hover {
+  background-color: #0077b6;
+  transform: scale(1.05);
+}
+
+.footer-text {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+/* 📱 Mobilga moslashuv */
+@media (max-width: 600px) {
+  .card {
+    padding: 40px 20px;
+  }
+
+  .card .title {
+    font-size: 24px;
+  }
+
+  .card .description {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 12px 22px;
+  }
+}
+/* ⬇️ ANIMATSIYA BOSHI */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 1.2s ease forwards;
+  }
+  /* ⬆️ ANIMATSIYA TUGADI */
+  
+  /* Qolgan CSS-ni oldingidek saqlang */
+  
