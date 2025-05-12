@@ -4,7 +4,93 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Telegram Taklifnoma</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      overflow-x: hidden;
+      color: #fff;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(6px);
+      border-radius: 16px;
+      overflow: hidden;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .card-content {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      background-color: #00aaff;
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #008ecc;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .footer-text {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  </style>
 </head>
 <body>
   <audio autoplay loop muted id="bg-music">
@@ -13,29 +99,33 @@
   </audio>
 
   <div class="container">
-    <main class="card fade-in-up">
-      <h1 class="title">Telegram Suhbatiga Taklif Etamiz</h1>
-      <p class="description">
-        Fikr almashish, bilim ulashish va do‘stona muhitda suhbatlashish uchun
-        sizni bizning rasmiy Telegram guruhimizga taklif qilamiz.
-      </p>
-      <a href="https://t.me/your_telegram_group" target="_blank" class="btn">
-        Telegram Guruhga Qo‘shilish
-      </a>
-    </main>
+    <main class="card">
+      <img src="./photo_2025-05-12_21-06-51.jpg" alt="Taklif Rasm" />
 
-    <footer>
-      <p class="footer-text">© 2025 Taklifnoma. Barcha huquqlar himoyalangan.</p>
-    </footer>
+      <div class="card-content">
+        <h1 class="title">Telegram Suhbatiga Taklif Etamiz</h1>
+        <p class="description">
+          Хурматли устоз,<br/><br/>
+          Сизни шу ойнинг 31 санасида каналимизда бўладиган жонли сухбатга таклиф қиламиз.<br/><br/>
+          <strong>Сухбат мавзу:</strong> Туркистоннинг ягона тарихи.<br/><br/>
+          Сухбатга эксперт сифатида хурматли олимимиз профессор Қахрамон Ражабовни таклиф қилганмиз.<br/><br/>
+          Сизни хам сухбатимизга қўшилиб, қимматли фикрларингиз билан бўлишишингиздан умидвормиз.<br/><br/>
+          Хурмат билан,<br/>
+          <strong>Турон Халқаро Ташкилоти хайати</strong>
+        </p>
+        <a href="https://t.me/txtturon" target="_blank" class="btn">
+          Qo‘shilish
+        </a>
+      </div>
+    </main>
   </div>
+
+  
 
   <script>
     const music = document.getElementById("bg-music");
-
-    // Musiqa avtomatik mute holatda boshlanadi
     music.volume = 0.4;
 
-    // Foydalanuvchi biror joyga bosganidan so‘ng, musiqa ovozi yoqiladi
     document.addEventListener('click', () => {
       if (music.muted) {
         music.muted = false;
