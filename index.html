@@ -107,8 +107,7 @@
         <p class="description">
           Хурматли устоз,<br/><br/>
           Сизни шу ойнинг 31 санасида каналимизда бўладиган жонли сухбатга таклиф қиламиз.<br/><br/>
-          <strong>Сухбатимиз мавзу: 
-            :</strong> Туркистоннинг ягона тарихи.<br/><br/>
+          <strong>Сухбатимиз мавзу: </strong> Туркистоннинг ягона тарихи.<br/><br/>
           Сухбатга эксперт сифатида хурматли олимимиз профессор Қахрамон Ражабовни таклиф қилганмиз.<br/><br/>
           Сизни хам сухбатимизга қўшилиб, қимматли фикрларингиз билан бўлишишингиздан умидвормиз.<br/><br/>
           Хурмат билан,<br/>
@@ -117,21 +116,28 @@
         <a href="https://t.me/txtturon" target="_blank" class="btn">
           Qo‘shilish
         </a>
+        <br><br>
+        <br>
+        <a href="javascript:void(0);" id="play-music" class="btn">
+          Musiqani Yoqish
+        </a>
       </div>
     </main>
   </div>
 
   
-
   <script>
     const music = document.getElementById("bg-music");
-    music.volume = 0.4;
+    const playButton = document.getElementById("play-music");
 
-    document.addEventListener('click', () => {
-      if (music.muted) {
-        music.muted = false;
-      }
+    // Musiqa tugmasini bosganda musiqa boshlanadi
+    playButton.addEventListener('click', () => {
+      music.muted = false; // Musiqani o‘chirib qo‘yishdan chiqaramiz
+      playButton.style.display = 'none'; // Musiqa tugmasini yashirish
     });
+
+    // Musiqa avtomatik muted boshlanadi
+    music.volume = 0.4;
   </script>
 </body>
 </html>
